@@ -1,5 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
-
 class UserModel {
   String? userID;
   String? name;
@@ -9,4 +7,13 @@ class UserModel {
 
   UserModel(
       {this.userID, this.name, this.email, this.photoUrl, this.exception});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'userID': userID,
+      'name': name,
+      'email': email,
+      'photoUrl': photoUrl
+    };
+  }
 }
